@@ -8,15 +8,16 @@
 		<style>
 			#tempsRestant {
 			font-size: 4em;
-			color: #F00;
+			color: #00F;
 			background-color: #000;
 			text-align: center;
-			border:solid red 3px;
-			border-radius: 5px;
+			border:solid blue 3px;
+			border-radius: 40px;
 			width: 15%;
 			margin:auto;
 			margin-top: 20%;
 		}
+
 	</style>
 	<p id="tempsRestant"></p>
 
@@ -30,7 +31,7 @@
 			var diff = start-now;
 			if ( diff < 0 ) {
 				clearInterval(monInterval);
-				document.getElementById('tempsRestant').innerHTML = 'compteur à 0';
+				document.getElementById('tempsRestant').innerHTML = 'compteur fini, tu vas mourir. Sorry !';
 			} else {
 				minutes = Math.floor(diff/1000/60);
 				secondes = Math.floor(diff/1000-minutes*60);
