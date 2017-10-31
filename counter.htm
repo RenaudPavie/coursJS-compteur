@@ -5,7 +5,19 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		
+		<style>
+			#tempsRestant {
+			font-size: 4em;
+			color: #F00;
+			background-color: #000;
+			text-align: center;
+			border:solid red 3px;
+			border-radius: 5px;
+			width: 15%;
+			margin:auto;
+			margin-top: 20%;
+		}
+	</style>
 	<p id="tempsRestant"></p>
 
 	<script>
@@ -22,9 +34,7 @@
 			} else {
 				minutes = Math.floor(diff/1000/60);
 				secondes = Math.floor(diff/1000-minutes*60);
-				ms = diff-minutes*60*1000-secondes*1000;
-
-				document.getElementById('tempsRestant').innerHTML = minutes+"mn "+secondes+'s '+ms+'ms';
+				document.getElementById('tempsRestant').innerHTML = minutes+":"+secondes;
 			}
 		}
 
